@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <title>Itbank</title>
+    <!-- CSS only --->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet"/>    
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+
+<body class="body">
+  <header>
+    <nav class="navbar bg-light fixed-top">
+      <div class="container-fluid">
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <h1 class="position-absolute top-0 start-50 translate-middle-x">
+          <!--<img src="images/Logoitbank.png" alt="" width="40px">--> ITBANK
+        </h1>
+        <button class="btn btn-light" type="submit">Salir <img src="images/exit.svg" alt=""></button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ITBANK</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+              <li><a class="nav-link" href="#">Pago de servicios</a></li>
+              <li><a class="nav-link" href="#">Préstamos</a></li>
+              <li><a class="nav-link" href="#">Pago de tarjeta</a></li>
+              <li><a class="nav-link" href="#">Movimientos</a></li>
+              <li><a class="nav-link" href="#">Inversiones</a></li>
+              <li><a class="nav-link" href="#">Asistencia | Consultas</a></li>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Como podemos ayudarte?" aria-label="Search">
+              <button class="btn btn-outline-dark" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+ </header>  <br>  
+
+
+        <!-----------------ACCESOS DIRECTOS------------->
+
+ <section class="container mt-5">
+  <h4 class="ms-1 mb-3 text-white">Accesos directos</h4>
+</section>
+<section class="container border border-secondary rounded-3 fs-5 bg-white">
+  <div class="row mt-2">
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/transferencia2.png" class="mx-auto d-block tamano"></div>
+              <p class="text-center">Transferencias</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/transferencia.png" class="mx-auto d-block"></div>
+              <p class="text-center">Pago de servicios</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/prestamo.png" class="mx-auto d-block"></div>
+              <p class="text-center">Prestamos</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/seguros.png" class="mx-auto d-block"></div>
+              <p class="text-center">Seguros</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/plazosfijjos.png" class="mx-auto d-block"></div>
+              <p class="text-center">Plazos fijos</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/calendario2.png" class="mx-auto d-block"></div>
+              <p class="text-center">Turnos online</p>
+          </div>
+      </div>
+  </div>
+</section>
+
+    <footer class="bg-dark text-center text-white fixed-bottom">
+
+      <div class="container p-1">
+        <!--Social media -->
+        <section class="mb-1
+        ">
+          <!-- Facebook -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+    
+          <!-- Twitter -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <!-- Instagram -->
+          <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+            ><i class="fab fa-instagram"></i
+          ></a>
+      </section>
+        <!--Links -->
+        <nav class="navf">
+          <ul class="listafooter">
+              <li><a href="" class="afooter">Acerca de Nosotros</a></li>
+              <li><a href="" class="afooter">Terminos y Condiciones</a></li>
+              <li><a href="" class="afooter">Privacidad y Confidencialidad</a></li>
+          </ul>
+      </nav>
+    
+      <!-- Copyright -->
+      <div class="text-center p-1
+      " style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 ITBA
+      </div>
+    
+    </footer>
+    
+ 
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
