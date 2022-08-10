@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
-    <title>Itbank</title>
+    <title>ITBANK</title>
     <!-- CSS only --->
+
+    <!--Estilos y fuentes del template-->
+
+    {% load static %}
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300&display=swap" rel="stylesheet">
@@ -15,9 +20,11 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
 
+
 <body class="body">
   <header>
     <nav class="navbar bg-light fixed-top">
+
       <div class="container-fluid">
 
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -25,7 +32,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <h1 class="position-absolute top-0 start-50 translate-middle-x">
-          <!--<img src="images/Logoitbank.png" alt="" width="40px">--> ITBANK
+          <!--<img src="images/Logoitbank.png" alt="" width="40px">--> {% block title%} {% endblock %}
         </h1>
         <button class="btn btn-light" type="submit">Salir <img src="images/exit.svg" alt=""></button>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
