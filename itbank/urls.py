@@ -26,8 +26,8 @@ from tarjetas_app import views as tarjetas_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',home_views.home, name="home"),
-    path('login/',login_views.login, name="login"),
+    path('',login_views.login, name="login"),
+    path('home/',home_views.home, name="home"),
     path('clientes/',clientes_views.clientes, name="clientes"),
     path('cuentas/',cuentas_views.cuentas, name="cuentas"),
     path('tarjetas/',tarjetas_views.tarjetas, name="tarjetas"),
