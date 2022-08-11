@@ -32,6 +32,7 @@
 .article-item-title{
     font-weight: bold;
     font-size: 20px;
+    margin: 0px;
 }
 .col-12-12{
     background-color: rgba(128, 128, 128, 0.548);
@@ -60,4 +61,23 @@
 .container-fluid {
     height: 700px;
     width: 100%;
+}
+
+footer{
+    background-color: #e5e5e5;
+}
+.col-md-12{
+    text-align: center;
+    
+    
+}
+a{
+    color: rgb(0, 0, 0);
+    display: inline-block;
+    
+    
+}
+li{
+    display: inline-block;
+    
 }
