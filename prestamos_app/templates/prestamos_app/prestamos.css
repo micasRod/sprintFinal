@@ -22,3 +22,27 @@
     font-weight: bold;
     font-size: 20px;
 }
+.col-12-12{
+    background-color: rgba(128, 128, 128, 0.548);
+    width: 100%;
+}
+.card {
+    background-color: rgb(130, 130, 212);
+    margin-left: 400px;
+    height: 200px;
+    width: 500px;
+    justify-content: center;
+    
+}
+.card2 {
+    background-color: rgb(130, 130, 212);
+    margin-right: 150px;
+    height: 200px;
+    width: 500px;
+    justify-content: center;
+    
+}
+.container-fluid {
+    height: 700px;
+    width: 100%;
+}
