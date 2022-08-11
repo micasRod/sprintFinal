@@ -1,0 +1,24 @@
+.main-prestamos{
+    padding: 60px 0;
+}
+
+.main-prestamos__title-container{
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.article-item__icon{
+    width: 88px;
+    height: 88px
+}
+.main-prestamos-title-container{
+    font-size: 50px;
+    font:bold
+}
+.article-item{
+    text-align: center;
+}
+.article-item-title{
+    font-weight: bold;
+    font-size: 20px;
+}
