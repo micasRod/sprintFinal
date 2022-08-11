@@ -1,0 +1,28 @@
+{% extends 'home_app/homebanking.html' %}
+{% load static %}
+
+
+{% block title%}ITBANK Gestion proyectos - Inicio {% endblock %}
+{% block background %}{% static 'home_app/img/home-bg.jpg' %}{% endblock%}
+{% block headers %}
+<h1>Portafolio</h1>
+<span class="subheading">Proyectos</span>
+{% endblock %}
+
+{% block content %}
+{% for project in projects %}
+<!-- Proyecto -->
+<div class="row project">
+<div class="col-lg-3 col-md-4 offset-lg-1">
+<div class="img-fluid" src="{{clientes_model.nombre}}" alt=""></div>
+</div>
+<div class="col-lg-7 col-md-8">
+<h2 class="section-heading title">{{clientes_model.apellido}}</h2>
+<p>{{clientes_model.telefono}}</p>
+{% if project.link %}
+<h1 href="{{Clientes.dni}}">Más información</h1>
+{% endif %}
+</div>
+</div>
+{% endfor %}
+{% endblock %}

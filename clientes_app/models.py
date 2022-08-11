@@ -1,11 +1,13 @@
+import numbers
+from unicodedata import numeric
 from django.db import models
 
-# CLASE DE EMPLO / NO SIRVE
+class Clientes(models.Model):
+    nombre = models.CharField(max_length=200)
+    apellido = models.CharField(max_length=200)
+    dni = models.CharField(max_length=200)
+    telefono = models.CharField(max_length=200)
+    correo = models.DateTimeField(max_length=200)
 
 
-class Project(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    image = models.ImageField()
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    
