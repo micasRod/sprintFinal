@@ -47,11 +47,150 @@
 {% endblock %}
 
 {% block content %}
+<section class="container mt-5">
+  <h4 class="ms-1 mb-3 text-white">Accesos directos</h4>
+</section>
+<section class="container border border-secondary rounded-3 fs-5 bg-white">
+  <div class="row mt-2">
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/transferencia2.png" class="mx-auto d-block tamano"></div>
+              <p class="text-center">Transferencias</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/transferencia.png" class="mx-auto d-block"></div>
+              <p class="text-center">Pago de servicios</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/prestamo.png" class="mx-auto d-block"></div>
+              <p class="text-center">Prestamos</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/seguros.png" class="mx-auto d-block"></div>
+              <p class="text-center">Seguros</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/plazosfijjos.png" class="mx-auto d-block"></div>
+              <p class="text-center">Plazos fijos</p>
+          </div>
+      </div>
+      <div class="colum-12 col-sm-4 col-lg-2 ">
+          <div class="border-end">
+              <div><img src="images/calendario2.png" class="mx-auto d-block"></div>
+              <p class="text-center">Turnos online</p>
+          </div>
+      </div>
+  </div>
+</section>
 
+<section>
+  <div class="container-fluid mb-4">
+    <div class="row">
+
+      <div class="col d-flex justify-content-end">
+        <div class="card shadow-lg border border-3  w-50 mb-2">
+          <div class="card-header  bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Oficial</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center fs-4">Precio compra:<p id="oficialPrecioCompra"></p></li>
+              <li class="list-group-item text-center fs-4">Precio venta:<p id="oficialPrecioVenta"></p></li>
+              <li class="list-group-item text-center fs-4">Variación:<p id="oficialVariacion"></p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card shadow-lg border border-3 w-50 mb-2">
+          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Blue</div>
+            
+          <div class="card-body">
+            <ul id= precioblue class="list-group list-group-flush">
+              <li class="list-group-item text-center fs-4">Precio compra:<p id="blueCompra"></p></li>
+              <li class="list-group-item text-center fs-4">Precio venta:<p id="blueVenta"></p></li>
+              <li class="list-group-item text-center fs-4">Variación:<p id="blueVariacion"></p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col d-flex justify-content-end" >
+        <div class="card shadow-lg border border-3 w-50 mb-2">
+          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Compra con liquidez</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center fs-4">Precio compra:<p id="compraLiqui"></p></li>
+              <li class="list-group-item text-center fs-4">Precio venta:<p id="ventaLiqui"></p></li>
+              <li class="list-group-item text-center fs-4">Variación:<p id="variacionLiqui"></p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card shadow-lg border border-3 w-50 mb-2">
+          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Promedio</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center fs-4">Precio compra:<p id="compraPromedio"></p></li>
+              <li class="list-group-item text-center fs-4">Precio venta:<p id="ventaPromedio"></p></li>
+              <li class="list-group-item text-center fs-4">Variación:<p id="variacionPromedio"></p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col d-flex justify-content-end">
+        <div class="card shadow-lg border border-3 w-50 mb-2">
+          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Bolsa</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center fs-4">Precio compra:<p id="compraBolsa"></p></li>
+              <li class="list-group-item text-center fs-4">Precio venta:<p id="ventaBolsa"></p></li>
+              <li class="list-group-item text-center fs-4">Variación:<p id="variacionBolsa"></p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col d-flex">
+        <div class="card shadow-lg border border-3 w-50 mb-2">
+          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Turista</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item text-center fs-4">Precio venta:<p id="ventaTurista"></p></li>
+              <li class="list-group-item text-center fs-4">Variación:<p id="variacionTurista"></p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+    
 {% endblock %}
 
 {% block footer %}
-<footer class="bg-dark text-center text-white fixed-bottom">
+<footer class="bg-dark text-center text-white">
   <div class="container p-1">
     <section class="mb-1">
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
