@@ -1,9 +1,26 @@
 from django.db import models
 
-# CLASE DE EMPLO / NO SIRVE
-class Project(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    image = models.ImageField()
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+
+class caja_ahorro(models.Model):
+    numero = models.CharField(max_length=200)
+    moneda = models.CharField(max_length=200)
+    trans_cuentExt = models.CharField(max_length=200)
+    cant_maxima = models.CharField(max_length=200)
+    cbu = models.CharField(max_length=200)
+    alias = models.CharField(max_length=200)
+
+class caja_ahorrodls(models.Model):
+    numero = models.CharField(max_length=200)
+    moneda = models.CharField(max_length=200)
+    trans_cuentExt = models.CharField(max_length=200)
+    cant_maxima = models.CharField(max_length=200)
+    cbu = models.CharField(max_length=200)
+    alias = models.CharField(max_length=200)
+
+class cuenta_corriente(models.Model):
+    numero = models.CharField(max_length=200)
+    moneda = models.CharField(max_length=200)
+    trans_cuentExt = models.CharField(max_length=200)
+    cant_maxima = models.CharField(max_length=200)
+    cbu = models.CharField(max_length=200)
+    alias = models.CharField(max_length=200)    

@@ -1,8 +1,8 @@
 from django.shortcuts import render, HttpResponse
-from .models import Clientes
+from .models import Cliente
 
 # Create your views here.
 def clientes(request):
-    clientes_model = Clientes.objects.all()
-    return render(request, "clientes_app/clientes.html", {'clientes_model': clientes_model})
+    cliente_model = Cliente.objects.all()
+    return render(request, "clientes_app/clientes.html", {'cliente_model': cliente_model})
 
