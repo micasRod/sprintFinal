@@ -23,7 +23,6 @@ from login_app import views as login_views
 from prestamos_app import views as prestamos_views
 from tarjetas_app import views as tarjetas_views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',login_views.login, name="login"),
@@ -32,5 +31,6 @@ urlpatterns = [
     path('cuentas/',cuentas_views.cuentas, name="cuentas"),
     path('tarjetas/',tarjetas_views.tarjetas, name="tarjetas"),
     path('prestamos/',prestamos_views.prestamos, name="prestamos"),
+    path('solicitud/',prestamos_views.solicitud, name="solicitud"),
 
 ]

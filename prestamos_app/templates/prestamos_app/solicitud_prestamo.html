@@ -1,0 +1,103 @@
+{% extends 'home_app/base.html' %}
+
+{% load static %}
+
+{% block title%} Prestamos {% endblock %}
+
+{% block header %}
+<header>
+  <nav class="navbar bg-light fixed-top">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <h1 class="position-absolute top-0 start-50 translate-middle-x">
+         ITBANK
+      </h1>
+      <button class="btn btn-light" type="submit">Salir <img src="images/exit.svg" alt=""></button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ITBANK</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+            <li><a class="nav-link" href="#">Pago de servicios</a></li>
+            <li><a class="nav-link" href="#">Préstamos</a></li>
+            <li><a class="nav-link" href="#">Pago de tarjeta</a></li>
+            <li><a class="nav-link" href="#">Movimientos</a></li>
+            <li><a class="nav-link" href="#">Inversiones</a></li>
+            <li><a class="nav-link" href="#">Asistencia | Consultas</a></li>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Como podemos ayudarte?" aria-label="Search">
+            <button class="btn btn-outline-dark" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>  
+{% endblock %}
+
+{% block content %}
+<div style="height: 200px; width: 200px;">
+
+</div>
+<div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+        {% if 'ok' in request.GET %}
+        <p><b>Su prestamo ha sido solicitado con exito</b></p>
+        {% endif %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <table>
+                    {{form.as_p}}
+                </table>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+        
+    </div>
+</div>
+<div style="height: 200px; width: 200px;">
+
+</div>
+{% endblock %}
+
+{% block footer %}
+
+<footer class="bg-dark text-center text-white">
+<div class="container p-1">
+    <section class="mb-1">
+    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-facebook-f"></i
+    ></a>
+    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-twitter"></i
+    ></a>
+    
+    <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+        ><i class="fab fa-instagram"></i
+    ></a>
+</section> 
+    <nav class="navf">
+    <ul class="listafooter">
+        <li><a href="" class="afooter">Acerca de Nosotros</a></li>
+        <li><a href="" class="afooter">Terminos y Condiciones</a></li>
+        <li><a href="" class="afooter">Privacidad y Confidencialidad</a></li>
+    </ul>
+</nav>   
+<div class="text-center p-1" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 ITBA
+</div> 
+</footer>
+
+{% endblock %}
