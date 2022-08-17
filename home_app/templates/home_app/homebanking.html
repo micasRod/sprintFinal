@@ -4,6 +4,8 @@
 
 {% block title%}ITBANK Gestion proyectos - Inicio {% endblock %}
 
+{% block background %}{% static 'img/fondo.jpg' %}{% endblock%}
+
 {% block header %}
 <header>
   <nav class="navbar bg-light fixed-top">
@@ -13,10 +15,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <h1 class="position-absolute top-0 start-50 translate-middle-x">
-         ITBANK
+         <img src="{% static 'img/itbank.png' %}" height="65px">
       </h1>
       
-      <button class="btn btn-light" type="submit">Salir <img src="images/exit.svg" alt=""></button>
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ITBANK</h5>
@@ -42,152 +43,87 @@
           </form>
         </div>
       </div>
+      <a class="btn btn-light" href="{% url 'logout' %}">SALIR</a>
     </div>
   </nav>
 </header>  
 {% endblock %}
 
 {% block content %}
-<section class="container mt-5">
-  <h4 class="ms-1 mb-3 text-white">Accesos directos</h4>
-</section>
-<section class="container border border-secondary rounded-3 fs-5 bg-white">
-  <div class="row mt-2">
-      <div class="colum-12 col-sm-4 col-lg-2 ">
-          <div class="border-end">
-              <div><img src="images/transferencia2.png" class="mx-auto d-block tamano"></div>
-              <p class="text-center">Transferencias</p>
-          </div>
-      </div>
-      <div class="colum-12 col-sm-4 col-lg-2 ">
-          <div class="border-end">
-              <div><img src="images/transferencia.png" class="mx-auto d-block"></div>
-              <p class="text-center">Pago de servicios</p>
-          </div>
-      </div>
-      <div class="colum-12 col-sm-4 col-lg-2 ">
-          <div class="border-end">
-              <div><img src="images/prestamo.png" class="mx-auto d-block"></div>
-              <p class="text-center">Prestamos</p>
-          </div>
-      </div>
-      <div class="colum-12 col-sm-4 col-lg-2 ">
-          <div class="border-end">
-              <div><img src="images/seguros.png" class="mx-auto d-block"></div>
-              <p class="text-center">Seguros</p>
-          </div>
-      </div>
-      <div class="colum-12 col-sm-4 col-lg-2 ">
-          <div class="border-end">
-              <div><img src="images/plazosfijjos.png" class="mx-auto d-block"></div>
-              <p class="text-center">Plazos fijos</p>
-          </div>
-      </div>
-      <div class="colum-12 col-sm-4 col-lg-2 ">
-          <div class="border-end">
-              <div><img src="images/calendario2.png" class="mx-auto d-block"></div>
-              <p class="text-center">Turnos online</p>
-          </div>
-      </div>
-  </div>
-</section>
-
-<section>
-  <div class="container-fluid mb-4">
-    <div class="row">
-
-      <div class="col d-flex justify-content-end">
-        <div class="card shadow-lg border border-3  w-50 mb-2">
-          <div class="card-header  bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Oficial</div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item text-center fs-4">Precio compra:<p id="oficialPrecioCompra"></p></li>
-              <li class="list-group-item text-center fs-4">Precio venta:<p id="oficialPrecioVenta"></p></li>
-              <li class="list-group-item text-center fs-4">Variación:<p id="oficialVariacion"></p></li>
-            </ul>
-          </div>
+  <!-- Header-->
+  <header class="py-5">
+    <div class="container px-lg-5">
+        <div class="p-4 p-lg-5 bg-light rounded-3 text-center">
+            <div class="m-4 m-lg-5">
+                <h1 class="display-5 fw-bold">HOMEBANKING</h1>
+                <p class="fs-4">Bootstrap utility classes are used to create this jumbotron since the old component has been removed from the framework. Why create custom CSS when you can use utilities?</p>
+                <a class="btn btn-primary btn-lg" href="#!">Comencemos con la accion</a>
+            </div>
         </div>
-      </div>
-
-      <div class="col d-flex">
-        <div class="card shadow-lg border border-3 w-50 mb-2">
-          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Blue</div>
-            
-          <div class="card-body">
-            <ul id= precioblue class="list-group list-group-flush">
-              <li class="list-group-item text-center fs-4">Precio compra:<p id="blueCompra"></p></li>
-              <li class="list-group-item text-center fs-4">Precio venta:<p id="blueVenta"></p></li>
-              <li class="list-group-item text-center fs-4">Variación:<p id="blueVariacion"></p></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
-
-    <div class="row">
-
-      <div class="col d-flex justify-content-end" >
-        <div class="card shadow-lg border border-3 w-50 mb-2">
-          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Compra con liquidez</div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item text-center fs-4">Precio compra:<p id="compraLiqui"></p></li>
-              <li class="list-group-item text-center fs-4">Precio venta:<p id="ventaLiqui"></p></li>
-              <li class="list-group-item text-center fs-4">Variación:<p id="variacionLiqui"></p></li>
-            </ul>
-          </div>
+</header>
+<!-- Page Content-->
+<section class="pt-4">
+    <div class="container px-lg-5">
+        <!-- Page Features-->
+        <div class="row gx-lg-5">
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+                        <h2 class="fs-4 fw-bold"><a class="btn" href="{% url 'cuentas' %}">Cuentas</a></h2>
+                        <p class="mb-0">With Bootstrap 5, we've created a fresh new layout for this template!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                        <h2 class="fs-4 fw-bold"><a class="btn" href="{% url 'tarjetas' %}">Tarjetas</a></h2>
+                        <p class="mb-0">As always, Start Bootstrap has a powerful collectin of free templates.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+                        <h2 class="fs-4 fw-bold"><a class="btn" href="{% url 'prestamos' %}">Prestamos</a></h2>
+                        <p class="mb-0">The heroic part of this template is the jumbotron hero header!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                        <h2 class="fs-4 fw-bold">Inversiones</h2>
+                        <p class="mb-0">We've created some custom feature boxes using Bootstrap icons!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                        <h2 class="fs-4 fw-bold">Seguros</h2>
+                        <p class="mb-0">We keep our dependencies up to date and squash bugs as they come!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-patch-check"></i></div>
+                        <h2 class="fs-4 fw-bold">Viajes</h2>
+                        <p class="mb-0">Start Bootstrap has been the leader in free Bootstrap templates since 2013!</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <div class="col d-flex">
-        <div class="card shadow-lg border border-3 w-50 mb-2">
-          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Promedio</div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item text-center fs-4">Precio compra:<p id="compraPromedio"></p></li>
-              <li class="list-group-item text-center fs-4">Precio venta:<p id="ventaPromedio"></p></li>
-              <li class="list-group-item text-center fs-4">Variación:<p id="variacionPromedio"></p></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
-
-    <div class="row">
-
-      <div class="col d-flex justify-content-end">
-        <div class="card shadow-lg border border-3 w-50 mb-2">
-          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Bolsa</div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item text-center fs-4">Precio compra:<p id="compraBolsa"></p></li>
-              <li class="list-group-item text-center fs-4">Precio venta:<p id="ventaBolsa"></p></li>
-              <li class="list-group-item text-center fs-4">Variación:<p id="variacionBolsa"></p></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="col d-flex">
-        <div class="card shadow-lg border border-3 w-50 mb-2">
-          <div class="card-header bg-dark text-white fs-3 fst-italic text-center fw-bolder">Dolar Turista</div>
-          <div class="card-body">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item text-center fs-4">Precio venta:<p id="ventaTurista"></p></li>
-              <li class="list-group-item text-center fs-4">Variación:<p id="variacionTurista"></p></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
 </section>
-
-    
 {% endblock %}
 
 {% block footer %}

@@ -17,9 +17,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <h1 class="position-absolute top-0 start-50 translate-middle-x">
-         ITBANK
+         <img src="{% static 'img/itbank.png' %}" height="65px">
       </h1>
-      <button class="btn btn-light" type="submit">Salir <img src="images/exit.svg" alt=""></button>
+      
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ITBANK</h5>
@@ -45,6 +45,7 @@
           </form>
         </div>
       </div>
+      <a class="btn btn-light" href="{% url 'logout' %}">SALIR</a>
     </div>
   </nav>
 </header>  

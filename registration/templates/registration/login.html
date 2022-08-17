@@ -1,0 +1,44 @@
+{% extends 'home_app/base.html' %}
+
+{% load static %}
+
+{% block title %}Iniciar sesión{% endblock %}
+
+
+{% block content %}
+
+<body style="background-color: #212529;">
+<div class="d-flex align-items-center">
+    <div class="container px-4 px-lg-5 my-5 btn " style="background-color: white;">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6 bg-light"><img class="card-img-top mb-5 mb-md-0" src="{% static 'registration/img/itbank.png' %}" height="399px"></div>
+            <div class="col-md-6 ">
+                <div class="container">
+                    <div class="row mt-3">
+                      <div class="col-md-9 mx-auto mb-5">
+                        <form action="" method="post">{% csrf_token %}
+                          <h3 class="mb-4">Iniciar sesión</h3>
+                          {% if form.non_field_errors %}
+                            <p style="color:red">Usuario o contraseña incorrectos, prueba de nuevo.</p>
+                          {% endif %}
+                          <p>
+                            <input type="text" name="username" autofocus maxlength="254" required
+                              id="id_username" class="form-control" placeholder="Nombre de usuario"/>
+                          </p>
+                          <p>
+                            <input type="password" name="password" required
+                              id="id_password" class="form-control" placeholder="Contraseña"/>
+                          </p>
+                          <p><input type="submit" class="btn btn-primary btn-block" value="Acceder"></p>
+                        </form>
+                      </div>
+                      <!--Opcion de olvido de contraseña-->
+                        <p><a href="{% url 'password_reset' %}">Olvido su contraseña?</a></p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>  
+</body>
+{% endblock %}

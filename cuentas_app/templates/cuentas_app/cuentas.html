@@ -17,9 +17,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <h1 class="position-absolute top-0 start-50 translate-middle-x">
-         ITBANK
+         <img src="{% static 'img/itbank.png' %}" height="65px">
       </h1>
-      <button class="btn btn-light" type="submit">Salir <img src="images/exit.svg" alt=""></button>
+      
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ITBANK</h5>
@@ -45,6 +45,7 @@
           </form>
         </div>
       </div>
+      <a class="btn btn-light" href="{% url 'logout' %}">SALIR</a>
     </div>
   </nav>
 </header>  
@@ -52,60 +53,85 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="row justify-center">
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
 
-      <div class="col-9">
-        <div class="card shadow mb-2" >
-          <div class="card-header fs-4">Cuenta 055-025711/8</div>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="accordion d-flex shadow " id="accordionFlushExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed justify-center p-2" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Consultas y Operaciones
-              </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body">
-                <div class="list-group list-group-flush p-1 ">
-                  <button type="button" class="list-group-item list-group-item-action">Resúmenes de cuenta</button>
-                  <button type="button" class="list-group-item list-group-item-action">Transferir</button>
-                  <button type="button" class="list-group-item list-group-item-action">Compra-Venta de Dólares</button>
-                  <button type="button" class="list-group-item list-group-item-action">Cambio de limite de extracción en cajeros</button>
-                  <button type="button" class="list-group-item list-group-item-action">Solicitud de chequera</button>
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Caja de ahorro</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Detalles</a></div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Caja de ahorro en dolares</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Detalles</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Cuenta corriente</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Detalles</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">Billetera Virtual</h5>
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Detalles</a></div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-      </div>
-
     </div>
-
-    <div class="row">
-      <div class="col-3">
-        Caja de ahorro en $
-      </div>
-      <div class="col-3">
-       Caja de ahorro en USD 
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col-3">
-        $ 0,00
-      </div>
-      <div class="col-3">
-       0,00 USD 
-      </div>
-    </div>
-
-
-  </div>
+</section>
 {% endblock %}
 
 {% block footer %}
