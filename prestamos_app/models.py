@@ -2,12 +2,12 @@ from datetime import date
 from django.db import models
 
 class Prestamo(models.Model):
-    tipo_prestamo = models.CharField(max_length=200)
-    cuota_prestamo = models.CharField(max_length=200)
-    fecha_prestamo = models.CharField(max_length=200)
-    total_prestamo = models.CharField(max_length=200)
-    aPagar_prestamo = models.CharField(max_length=200)
-    estado = models.CharField(max_length=200)
+    tipo_prestamo = models.CharField(max_length=10,primary_key=True)
+    cuota_prestamo = models.IntegerField()
+    fecha_prestamo = models.DateField()
+    total_prestamo = models.IntegerField()
+    aPagar_prestamo = models.IntegerField()
+    estado = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = 'Prestamo'

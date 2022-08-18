@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def prestamos(request):
     return render(request, "prestamos_app/prestamos.html")
-
+@login_required
 def solicitud(request):
     solicitud_prestamo = SolicitudForm()
 

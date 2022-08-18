@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Caja as tipo_caja
-from .models import cuenta_corriente as cuenta_corriente
+from .models import Cuenta 
+
 # Register your models here.
-admin.site.register(tipo_caja)
-admin.site.register(cuenta_corriente)
+admin.site.register(Cuenta)
