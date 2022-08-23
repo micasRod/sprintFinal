@@ -7,10 +7,7 @@
     margin-bottom: 35px;
 }
 
-.article-item__icon{
-    width: 88px;
-    height: 88px
-}
+
 .main-prestamos-title-container{
     font-size: 50px;
     font:bold;
@@ -86,4 +83,9 @@ li{
 .sm-12{
     background-color: rgba(128, 128, 128, 0.8);
     margin-top: 100px;
+}
+
+.article-item__icon{
+    width: 88px;
+    height: 88px
 }
