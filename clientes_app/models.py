@@ -3,7 +3,7 @@ from tabnanny import verbose
 from unicodedata import numeric
 from django.db import models
 
-class Categoria(models.Model):
+"""class Categoria(models.Model):
     categoria_tipo = models.CharField(max_length=10,primary_key=True)
     cant_tarjetas = models.IntegerField()
     cant_cajas = models.IntegerField()
@@ -19,16 +19,16 @@ class Categoria(models.Model):
         verbose_name_plural = 'Categorias'
 
     def __str__(self):
-        return self.categoria_tipo    
+        return self.categoria_tipo   """ 
 
 
 
 class Cliente(models.Model):
-    id = models.IntegerField(primary_key=True)
-    dni = models.CharField(max_length=10,null=True)
-    nombre = models.CharField(max_length=50,null=True)
-    apellido = models.CharField(max_length=50,null=True)
-    categoria = models.CharField(max_length=50)
+    customer_id = models.IntegerField(primary_key=True)
+    customer_DNI = models.CharField(max_length=10,null=True)
+    customer_name = models.CharField(max_length=50,null=True)
+    customer_surname = models.CharField(max_length=50,null=True)
+    branch_id = models.CharField(max_length=50)
     
 
     class Meta:
@@ -36,7 +36,7 @@ class Cliente(models.Model):
         verbose_name_plural = 'Clientes'
 
     def __str__(self):
-        return self.nombre
+        return self.customer_name
 
 
 

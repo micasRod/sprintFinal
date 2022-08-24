@@ -1,18 +1,15 @@
 from tabnanny import verbose
 from django.db import models as models
+from clientes_app.models import Cliente as Cliente_cuenta
 
 class Cuenta(models.Model):
-    tipo = models.CharField(max_length=10, primary_key=True)
-    moneda = models.CharField(max_length=10)
-    trans_cuentExt = models.BooleanField(default=False)
-    cbu = models.IntegerField()
-    alias = models.CharField(max_length=10)
+    account_id = models.IntegerField(null=False, primary_key=True)
+    customer_id = models.ForeignKey(Cliente_cuenta, null=True, blank=True, on_delete=models.CASCADE)
+    balance = models.IntegerField(null=False)
 
     class Meta:
-        verbose_name = 'Caja de ahorro'
-        verbose_name_plural = 'Cajas de ahorro'
+        verbose_name = 'Cuenta'
+        verbose_name_plural = 'Cuentas'
 
-    def __str__(self):
-        return self.numero
 
 
