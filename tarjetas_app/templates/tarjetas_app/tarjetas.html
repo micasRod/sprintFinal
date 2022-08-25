@@ -20,7 +20,7 @@
          <img src="{% static 'img/itbank.png' %}" height="65px">
       </h1>
       
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ITBANK</h5>
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -28,15 +28,15 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
             </li>
             <li class="nav-item">
-            <li><a class="nav-link" href="#">Pago de servicios</a></li>
-            <li><a class="nav-link" href="#">Préstamos</a></li>
-            <li><a class="nav-link" href="#">Pago de tarjeta</a></li>
-            <li><a class="nav-link" href="#">Movimientos</a></li>
-            <li><a class="nav-link" href="#">Inversiones</a></li>
-            <li><a class="nav-link" href="#">Asistencia | Consultas</a></li>
+            <li><a class="nav-link" href="{% url 'prestamos' %}">Préstamos</a></li>
+            <li><a class="nav-link" href="{% url 'tarjetas' %}">Tarjetas</a></li>
+            <li><a class="nav-link" href="{% url 'cuentas' %}">Cuentas</a></li>
+            <li><a class="nav-link" href="">Inversiones</a></li>
+            <li><a class="nav-link" href="">Asistencia | Consultas</a></li>
+            <li><a class="nav-link" href="">Mi cuenta</a></li>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -50,6 +50,7 @@
   </nav>
 </header>  
 {% endblock %}
+
 
 {% block content %}
 <!------------TUS PRODUCTOS   -->
